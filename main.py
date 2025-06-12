@@ -4,7 +4,10 @@ MAIN_DIR = 'C:\\Users\\mnurf\\Documents\\Projects\\python-projects\\custom-plott
 sys.path.append(MAIN_DIR)
 
 import functions
-from config import config
+try:
+    from config import config
+except ModuleNotFoundError:
+    from config_template import config
 from tools.plotter.plotter import Plotter
 
 
